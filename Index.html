@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi portafolio JavaScript</title>
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+
+  <!-- Contenedor principal con borde de doble línea -->
+  <div class="marquesina-contenedor">
+    
+    <!-- Título de la actividad -->
+    <h1 class="titulo">Mi portafolio JavaScript</h1>
+
+    <!-- Datos del alumno y académicos -->
+    <p class="nombre">Yael Rosas</p>
+    <p class="campus">Campus Guadalajara Sur</p>
+    <p class="docente">Docente: [Nombre del Docente]</p>
+
+    <!-- Enlace hacia la práctica de marquesina -->
+    <div style="margin: 20px 0;">
+      <a href="marquesina.html" class="btn-enlace">Ir a la práctica de Marquesina JS</a>
+    </div>
+
+    <!-- Logotipo de la UVM -->
+    <div class="logo-container">
+      <img src="Mis imagenes/logo.jpg.jpg" alt="Logotipo UVM" class="logo-uvm">
+    </div>
+  </div>
+
+  <!-- Sección de Botones Interactivos -->
+  <div class="botones-container">
+    <button id="btnUVM" class="btn btn-verde">UVM</button>
+    <a href="Carrusel.html" class="btn btn-azul" style="text-decoration: none; display: inline-block;">Carrusel de imágenes</a>
+  </div>
+
+  <!-- Script para la navegación del botón UVM -->
+  <script>
+    document.getElementById('btnUVM').addEventListener('click', function() {
+      window.location.href = 'https://www.uvm.mx/';
+    });
+  </script>
+
+</body>
+</html>

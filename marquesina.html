@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marquesina con JavaScript - Yael Rosas</title>
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+
+  <div class="marquesina-contenedor">
+    <h1 class="titulo">Prueba de Marquesina JavaScript</h1>
+    <p class="nombre">Yael Rosas - 4to Semestre UVM</p>
+
+    <!-- Contenedor donde la marquesina se moverá de forma real -->
+    <div class="caja-marquesina-movimiento">
+      <span id="texto-movimiento"></span>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <a href="index.html" class="btn-enlace">Regresar al Portafolio</a>
+    </div>
+  </div>
+
+  <!-- Código JavaScript para el movimiento real (efecto marquesina deslizable) -->
+  <script>
+    // Texto que se va a desplazar de un lado a otro
+    let mensaje = "¡Bienvenido a mi portafolio! Soy estudiante de 4to semestre de bachillerato semestral UVM. ";
+
+    function moverMarquesina() {
+      // Tomamos el primer carácter del texto y lo pasamos al final para crear el bucle de movimiento
+      mensaje = mensaje.substring(1) + mensaje.charAt(0);
+      document.getElementById("texto-movimiento").innerText = mensaje;
+    }
+
+    // Velocidad del movimiento: puedes modificar los milisegundos (ej. 150 es velocidad media, menor número = más rápido)
+    setInterval(moverMarquesina, 150);
+  </script>
+
+</body>
+</html>
